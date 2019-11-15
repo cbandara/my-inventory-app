@@ -1,9 +1,19 @@
 import React from "react";
-import "./Board.css";
+import "./ProductList.css";
 
 class ProductList extends React.Component {
   render() {
-    return <div className="ProductList">Product Product Product</div>;
+    return (
+      <div className="ProductList">
+        <ul>
+          <li>0011</li>
+          <li>0231</li>
+          <li>6653</li>
+          <li>2443</li>
+          <li>7888</li>
+        </ul>
+      </div>
+    );
   }
 }
 
