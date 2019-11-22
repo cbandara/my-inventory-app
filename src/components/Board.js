@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Menu from "./Menu.js";
-import ProductList from "./ProductList.js";
+import ProductList from "./ProductList";
 import "./Board.css";
 
 class Board extends React.Component {

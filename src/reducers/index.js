@@ -21,8 +21,6 @@ export const productReducer = (state = initialState, action) => {
       productList: [...state.productList, action.product]
     });
   }
-  // else if (action.type === actions.ADD_CARD) {
 
-  //     return newState;
-  // }
+  return state;
 };

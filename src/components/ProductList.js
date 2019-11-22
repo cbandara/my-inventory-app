@@ -1,20 +1,19 @@
 import React from "react";
-import Product from "./Product.js";
+import Product from "./Product";
 import "./ProductList.css";
 
 class ProductList extends React.Component {
   render() {
+    const products = this.props.productList.map(prod => {
+      return (
+        <li>
+          <Product item={prod}></Product>
+        </li>
+      );
+    });
     return (
       <div className="ProductList">
-        <ul>
-          <li>
-            <Product></Product>
-          </li>
-          <li>0231</li>
-          <li>6653</li>
-          <li>2443</li>
-          <li>7888</li>
-        </ul>
+        <ul>{products}</ul>
       </div>
     );
   }
