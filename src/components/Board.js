@@ -1,17 +1,26 @@
 import React from "react";
+import { connect } from "react-redux";
 import Menu from "./Menu.js";
 import ProductList from "./ProductList.js";
 import "./Board.css";
 
 class Board extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   // const productList = props.productList;
+  // }
+
   render() {
     return (
       <div className="Board">
         <Menu></Menu>
-        <ProductList></ProductList>
+        <ProductList productList={this.props.productList}></ProductList>
       </div>
     );
   }
 }
+export const mapStateToProps = state => ({
+  productList: state.productList
+});
 
-export default Board;
+export default connect(mapStateToProps)(Board);
