@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Switch, Route } from "react-router-dom";
 import Menu from "./Menu.js";
 import ProductList from "./ProductList";
 import "./Board.css";
@@ -14,13 +15,12 @@ class Board extends React.Component {
     return (
       <div className="Board">
         <Menu></Menu>
-        <ProductList productList={this.props.productList}></ProductList>
+        <Switch>
+          <Route exact path="/" component={ProductList} />
+        </Switch>
       </div>
     );
   }
 }
-export const mapStateToProps = state => ({
-  productList: state.productList
-});
 
-export default connect(mapStateToProps)(Board);
+export default connect(Board);
