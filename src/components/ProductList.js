@@ -1,6 +1,7 @@
 import React from "react";
 import Product from "./Product";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import "./ProductList.css";
 import { addProduct } from "../actions";
 import store from "../store";
@@ -17,13 +18,12 @@ class ProductList extends React.Component {
     return (
       <div className="ProductList">
         <ul>{products}</ul>
-        <button onClick={handleAddProduct}>Add Product</button>
+        <Link to="/addProduct"><button>Add Product</button></Link>
       </div>
     );
   }
 }
 
-function handleAddProduct() {}
 
 export const mapStateToProps = state => ({
   productList: state.productList

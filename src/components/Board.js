@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Switch, Route } from "react-router-dom";
-import Menu from "./Menu.js";
+import Menu from "./Menu";
 import ProductList from "./ProductList";
+import AddProduct from "./AddProduct";
 import "./Board.css";
 
 class Board extends React.Component {
@@ -17,10 +18,11 @@ class Board extends React.Component {
         <Menu></Menu>
         <Switch>
           <Route exact path="/" component={ProductList} />
+          <Route path="/addProduct" component={AddProduct} />
         </Switch>
       </div>
     );
   }
 }
 
-export default connect(Board);
+export default Board;
