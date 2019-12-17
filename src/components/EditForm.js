@@ -15,7 +15,7 @@ class EditForm extends React.Component {
   }
 
   render() {
-    console.log(this)
+    console.log(this.props)
     return (
       // Convert to Redux Form when using API
       <div className="formWrapper">
