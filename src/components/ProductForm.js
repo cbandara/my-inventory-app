@@ -12,6 +12,7 @@ class ProductForm extends React.Component {
     const img = this.img.value;
 
     this.props.dispatch(addProduct({ id, img }))
+    this.props.history.push("/")
   }
 
   render() {
