@@ -1,3 +1,6 @@
 ul {
   list-style: none;
+  -webkit-columns: 2 200px;
+  -moz-columns: 2 200px;
+  columns: 2 200px;
 }
