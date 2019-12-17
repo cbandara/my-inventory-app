@@ -13,3 +13,6 @@ class Product extends React.Component {
 }
 
 export default Product;
+
+// Hook up Product to ProductList
+// Connect ProductList to Store
