@@ -5,7 +5,7 @@ class Product extends React.Component {
   render() {
     return (
       <div className="Product">
-        <img src={this.props.item.img}></img>
+        <img src={this.props.item.img} alt={this.props.item.id}></img>
         <p>{this.props.item.id}</p>
       </div>
     );
@@ -13,6 +13,3 @@ class Product extends React.Component {
 }
 
 export default Product;
-
-// Hook up Product to ProductList
-// Connect ProductList to Store

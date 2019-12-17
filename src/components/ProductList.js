@@ -3,8 +3,7 @@ import Product from "./Product";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./ProductList.css";
-import { addProduct } from "../actions";
-import store from "../store";
+
 
 class ProductList extends React.Component {
   render() {
