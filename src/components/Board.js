@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Menu from "./Menu";
 import ProductList from "./ProductList";
 import ProductForm from "./ProductForm";
+import EditForm from "./EditForm";
 import "./Board.css";
 
 class Board extends React.Component {
@@ -18,6 +19,7 @@ class Board extends React.Component {
         <Switch>
           <Route exact path="/" component={ProductList} />
           <Route path="/addProduct" component={ProductForm} />
+          <Route path="/editProduct" component={EditForm} />
         </Switch>
       </div>
     );

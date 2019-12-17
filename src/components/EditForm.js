@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { addProduct } from "../actions";
 import "./ProductForm.css";
 
-class ProductForm extends React.Component {
+class EditForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const id = this.id.value;
@@ -15,7 +15,7 @@ class ProductForm extends React.Component {
   }
 
   render() {
-
+    console.log(this)
     return (
       // Convert to Redux Form when using API
       <div className="formWrapper">
@@ -46,8 +46,4 @@ class ProductForm extends React.Component {
   }
 }
 
-export default connect()(ProductForm);
-
-// export default reduxForm({
-//   form: 'product'
-// })(ProductForm);
+export default connect()(EditForm);
