@@ -11,6 +11,8 @@ class ProductForm extends React.Component {
     const id = this.id.value;
     const img = this.img.value;
     this.props.dispatch(addProduct({ id, img }));
+    this.id.value = '';
+    this.img.value = '';
     this.props.history.push("/"); // Redirects to the root path
   }
 
