@@ -21,6 +21,11 @@ export const productReducer = (state = initialState, action) => {
       productList: [...state.productList, action.product]
     });
   }
+  if (action.type === ADD_PRODUCT) {
+    return Object.assign({}, state, {
+      productList: [...state.productList, action.product]
+    });
+  }
 
   return state;
 };

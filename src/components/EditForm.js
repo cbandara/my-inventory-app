@@ -14,8 +14,11 @@ class EditForm extends React.Component {
     this.props.history.push("/"); // Redirects to the root path
   }
 
+  handleChange(e) {
+    console.log(e.target.value);
+  }
+
   render() {
-    console.log(this)
     return (
       // Convert to Redux Form when using API
       <div className="formWrapper">
@@ -26,6 +29,8 @@ class EditForm extends React.Component {
             id="id"
             type="number"
             ref={id => (this.id = id)}
+            onChange={this.handleChange}
+            defaultValue={this.props.match.params.itemID}
             required
           ></input>
           <br />
@@ -35,7 +40,8 @@ class EditForm extends React.Component {
             id="img"
             type="text"
             ref={img => (this.img = img)}
-            required
+            onChange={this.handleChange}
+            defaultValue={this.props.match.params.itemID}
           ></input>
           <br />
           <button type="submit">Add</button>

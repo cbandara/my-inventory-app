@@ -19,7 +19,7 @@ class Board extends React.Component {
         <Switch>
           <Route exact path="/" component={ProductList} />
           <Route path="/addProduct" component={ProductForm} />
-          <Route path='/editProduct/edit:itemID' component={EditForm} />
+          <Route path='/edit/:itemID' component={EditForm} />
         </Switch>
       </div>
     );
