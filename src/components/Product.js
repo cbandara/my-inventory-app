@@ -1,19 +1,30 @@
 import React from "react";
 import "./Product.css";
 import { Link } from "react-router-dom";
+import { storeProductData } from "../actions";
 
 class Product extends React.Component {
-  render() {
+  handleOnClick(id, name, img) {
 
-    const itemId = `/edit/${this.props.item.id}`
+    this.props.dispatch(storeProductData({ id, name, img }));
+  }
+  render() {
+    console.log(this)
+    const itemlink = `/edit/${this.props.item.id}/${this.props.item.name}/${this.props.item.img}`
     return (
       <div className="Product">
-        <img src={this.props.item.img} alt={this.props.item.id}></img>
+        <img src={this.props.item.img} alt={this.props.item.name}></img>
         <p className="id">{this.props.item.id}</p>
-        <Link to={itemId}><button>Edit</button></Link>
+        <p className="id">{this.props.item.name}</p>
+        <button onClick={this.handleOnClick(this.props.item.id, this.props.item.name, this.props.item.img)}>Edit</button>
       </div>
     );
   }
 }
 
 export default Product;
+
+
+// onClick edit button, create function to dispatch an action
+// Create an action and reducer
+// Redirect to edit form page

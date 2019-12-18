@@ -9,8 +9,9 @@ class ProductForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const id = this.id.value;
+    const name = this.name.value;
     const img = this.img.value;
-    this.props.dispatch(addProduct({ id, img }));
+    this.props.dispatch(addProduct({ id, name, img }));
     this.id.value = '';
     this.img.value = '';
     this.props.history.push("/"); // Redirects to the root path
@@ -28,6 +29,14 @@ class ProductForm extends React.Component {
             id="id"
             type="number"
             ref={id => (this.id = id)}
+            required
+          ></input>
+          <br />
+          <input
+            name="name"
+            id="name"
+            type="text"
+            ref={name => (this.name = name)}
             required
           ></input>
           <br />
