@@ -40,7 +40,7 @@ export const productReducer = (state = initialState, action) => {
       productList
     });
   }
-  if (action.type === ADD_PRODUCT) {
+  if (action.type === STORE_PRODUCT_DATA) {
     return Object.assign({}, state, {
       editFormData: action.product
     });

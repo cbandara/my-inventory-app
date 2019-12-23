@@ -18,6 +18,8 @@ class EditForm extends React.Component {
   }
 
   render() {
+    // Get product from redux state
+    // let product = 
     console.log(this.props)
     return (
       // Convert to Redux Form when using API
