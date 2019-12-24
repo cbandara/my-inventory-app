@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import Product from "./Product";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -10,7 +11,11 @@ class ProductList extends React.Component {
     const products = this.props.productList.map(prod => {
       return (
         <li key={prod.id}>
-          <Product item={prod}></Product>
+          <Route
+            path='/'
+            render={(props) => <Product item={prod} />}
+          />
+          {/* <Product item={prod}></Product> */}
         </li>
       );
     });
