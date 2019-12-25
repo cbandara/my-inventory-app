@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Product from "./Product";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -9,11 +9,12 @@ import "./ProductList.css";
 class ProductList extends React.Component {
   render() {
     const products = this.props.productList.map(prod => {
+      const prodPath = '/product/' + prod.id
       return (
         <li key={prod.id}>
           <Route
-            path='/'
-            render={(props) => <Product item={prod} />}
+            path={prodPath}
+            render={(props) => <Product {...props} item={prod} />}
           />
           {/* <Product item={prod}></Product> */}
         </li>
