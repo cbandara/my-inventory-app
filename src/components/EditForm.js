@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { editProduct } from "../actions";
 import { withRouter } from "react-router";
-import "./ProductForm.css";
+import "./ProductForm.scss";
 
 class EditForm extends React.Component {
   onSubmit(event) {
@@ -49,7 +49,7 @@ class EditForm extends React.Component {
             required
           ></input>
           <br />
-          <button type="submit">Add</button>
+          <button type="submit" className="menu-button">Add</button>
         </form>
       </div>
 

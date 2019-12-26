@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 // import Input from "./Input";
 // import { reduxForm, Field } from 'redux-form';
 import { addProduct } from "../actions";
-import "./ProductForm.css";
+import "./ProductForm.scss";
 
 class ProductForm extends React.Component {
   onSubmit(event) {
@@ -32,6 +32,7 @@ class ProductForm extends React.Component {
             required
           ></input>
           <br />
+          <label htmlFor="name">Name</label>
           <input
             name="name"
             id="name"

@@ -7,8 +7,8 @@ class Menu extends React.Component {
     return (
       <div className="Menu">
 
-        <Link to="/addProduct"><button>Add Product</button></Link>
-        <Link to="/"><button>Inventory</button></Link>
+        <Link to="/addProduct"><button className="menu-button">Add Product</button></Link>
+        <Link to="/"><button className="menu-button">Inventory</button></Link>
       </div>
     );
   }

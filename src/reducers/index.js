@@ -45,9 +45,9 @@ export const productReducer = (state = initialState, action) => {
     });
   }
   if (action.type === DELETE_PRODUCT) {
-    console.log(action)
+    console.log(action, state.productList)
     return Object.assign({}, state, {
-      productList: [state.productList.filter(element => element !== action.product)]
+      productList: state.productList.filter(element => element.id !== action.product.id)
     });
   }
 
