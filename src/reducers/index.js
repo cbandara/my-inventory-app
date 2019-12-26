@@ -21,6 +21,7 @@ const initialState = {
 
 export const productReducer = (state = initialState, action) => {
   if (action.type === ADD_PRODUCT) {
+    console.log(action)
     return Object.assign({}, state, {
       productList: [...state.productList, action.product]
     });
@@ -28,6 +29,7 @@ export const productReducer = (state = initialState, action) => {
   if (action.type === EDIT_PRODUCT) {
     console.log(action.product)
     //Use map to find product match
+    const originalList = state.productList
     const productList = state.productList.map(product => {
       if (product.id === action.product.id) {
         return action.product;
@@ -36,11 +38,13 @@ export const productReducer = (state = initialState, action) => {
         return product;
       }
     })
+    console.log(originalList, productList)
     return Object.assign({}, state, {
       productList
     });
   }
   if (action.type === STORE_PRODUCT_DATA) {
+    console.log(action)
     return Object.assign({}, state, {
       editFormData: action.product
     });

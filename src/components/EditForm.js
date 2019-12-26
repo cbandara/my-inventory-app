@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { editProduct } from "../actions";
+import { withRouter } from "react-router";
 import "./ProductForm.css";
 
 class EditForm extends React.Component {
@@ -8,7 +9,9 @@ class EditForm extends React.Component {
     event.preventDefault();
     const name = this.name.value;
     const img = this.img.value;
-    this.props.dispatch(editProduct({ name, img }));
+    const id = this.props.editFormData.id
+    console.log(id)
+    this.props.dispatch(editProduct({ id, name, img }));
     this.props.history.push("/"); // Redirects to the root path
   }
 
@@ -19,8 +22,8 @@ class EditForm extends React.Component {
 
   render() {
     // Get product from redux state
-    // let product = 
-    console.log(this.props)
+    // let productId = this.match.params.id
+    console.log(this.props.editFormData)
     return (
       // Convert to Redux Form when using API
       <div className="formWrapper">
@@ -32,7 +35,7 @@ class EditForm extends React.Component {
             type="text"
             ref={name => (this.name = name)}
             onChange={this.handleChange}
-            defaultValue={this.props.name}
+            defaultValue={this.props.editFormData.name}
             required
           ></input>
           <br />
@@ -42,7 +45,7 @@ class EditForm extends React.Component {
             id="img"
             type="text"
             ref={img => (this.img = img)}
-            defaultValue={this.props.match.params.img}
+            defaultValue={this.props.editFormData.img}
             required
           ></input>
           <br />
@@ -55,7 +58,8 @@ class EditForm extends React.Component {
 }
 
 export const mapStateToProps = state => ({
-  productList: state.productList
+  productList: state.productList,
+  editFormData: state.editFormData
 });
 
-export default connect(mapStateToProps)(EditForm);
+export default withRouter(connect(mapStateToProps)(EditForm));
