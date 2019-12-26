@@ -1,17 +1,17 @@
 import React from "react";
 import "./Product.css";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import { withRouter } from "react-router";
-import { storeProductData } from "../actions";
+import { storeProductData, deleteProduct } from "../actions";
 
 class Product extends React.Component {
   // handleOnClick() {
   //   console.log(this.props.item.id)
   //   // this.props.dispatch(storeProductData({ id, name, img }));
   // 
-  handleOnClick = () => {
-    console.log(this.props.item.id, this.props.item.name, this.props.item.img)
+  handleOnClickEdit = () => {
+    // console.log(this.props.item.id, this.props.item.name, this.props.item.img)
     const id = this.props.item.id;
     const name = this.props.item.name;
     const img = this.props.item.img;
@@ -20,6 +20,17 @@ class Product extends React.Component {
     this.props.history.push("/edit");
     // return (<Redirect to="/edit" />)
   }
+
+  handleOnClickDelete = () => {
+    console.log(this.props.item.id, this.props.item.name, this.props.item.img)
+    const id = this.props.item.id;
+    const name = this.props.item.name;
+    const img = this.props.item.img;
+    this.props.dispatch(deleteProduct({ id, name, img }));
+    this.props.history.push("/");
+    // return (<Redirect to="/edit" />)
+  }
+
   render() {
     const itemlink = `/edit/${this.props.item.id}`
     return (
@@ -28,7 +39,8 @@ class Product extends React.Component {
         <p className="id">{this.props.item.id}</p>
         <p className="id">{this.props.item.name}</p>
         {/* <Link to={itemlink} onClick={this.handleOnClick}><button>Edit</button></Link> */}
-        <button onClick={this.handleOnClick}>Edit</button>
+        <button onClick={this.handleOnClickEdit}>Edit</button>
+        <button onClick={this.handleOnClickDelete}>Delete</button>
       </div>
     );
   }

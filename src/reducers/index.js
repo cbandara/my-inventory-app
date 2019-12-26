@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, EDIT_PRODUCT, STORE_PRODUCT_DATA } from "../actions/index.js";
+import { ADD_PRODUCT, EDIT_PRODUCT, STORE_PRODUCT_DATA, DELETE_PRODUCT } from "../actions/index.js";
 
 const initialState = {
   // add edit form data
@@ -21,15 +21,12 @@ const initialState = {
 
 export const productReducer = (state = initialState, action) => {
   if (action.type === ADD_PRODUCT) {
-    console.log(action)
     return Object.assign({}, state, {
       productList: [...state.productList, action.product]
     });
   }
   if (action.type === EDIT_PRODUCT) {
-    console.log(action.product)
-    //Use map to find product match
-    const originalList = state.productList
+    //Use map to find product matchx
     const productList = state.productList.map(product => {
       if (product.id === action.product.id) {
         return action.product;
@@ -38,15 +35,19 @@ export const productReducer = (state = initialState, action) => {
         return product;
       }
     })
-    console.log(originalList, productList)
     return Object.assign({}, state, {
       productList
     });
   }
   if (action.type === STORE_PRODUCT_DATA) {
-    console.log(action)
     return Object.assign({}, state, {
       editFormData: action.product
+    });
+  }
+  if (action.type === DELETE_PRODUCT) {
+    console.log(action)
+    return Object.assign({}, state, {
+      productList: [state.productList.filter(element => element !== action.product)]
     });
   }
 
