@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 // import Input from "./Input";
 // import { reduxForm, Field } from 'redux-form';
 import { addProduct } from "../actions";
-import "./ProductForm.scss";
+import "./ProductForm.css";
 
 class ProductForm extends React.Component {
   onSubmit(event) {
@@ -45,12 +45,12 @@ class ProductForm extends React.Component {
           <input
             name="img"
             id="img"
-            type="text"
+            type="text-area"
             ref={img => (this.img = img)}
             required
           ></input>
           <br />
-          <button type="submit">Add</button>
+          <button type="submit" class="form-button">Add</button>
         </form>
       </div>
 

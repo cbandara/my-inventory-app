@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { editProduct } from "../actions";
 import { withRouter } from "react-router";
-import "./ProductForm.scss";
+import "./ProductForm.css";
 
 class EditForm extends React.Component {
   onSubmit(event) {
@@ -43,13 +43,13 @@ class EditForm extends React.Component {
           <input
             name="img"
             id="img"
-            type="text"
+            type="text-area"
             ref={img => (this.img = img)}
             defaultValue={this.props.editFormData.img}
             required
           ></input>
           <br />
-          <button type="submit" className="menu-button">Add</button>
+          <button type="submit" class="form-button">Add</button>
         </form>
       </div>
 
