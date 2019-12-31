@@ -5,11 +5,26 @@ import { connect } from "react-redux";
 import { registerUser } from "../actions";
 import "./ProductForm.css";
 
-class ProductForm extends React.Component {
+class RegisterForm extends React.Component {
+  state = {}
+
   onSubmit(event) {
     event.preventDefault();
     const email = this.email.value;
     const password = this.password.value;
+    const confirmPassword = this.confirmPassword.value;
+
+    if(password !== confirmPassword){
+      this.setState({
+        error: 'passwords does not match'
+      })
+      return
+    }
+    if(password.length < 8){
+      this.setState({
+        error: "password must be a minimum of 8 characters"
+      })
+    }
     this.props.dispatch(registerUser({ email, password }));
     this.password.value = '';
     this.props.history.push("/"); // Redirects to the root path
@@ -44,7 +59,7 @@ class ProductForm extends React.Component {
             id="password"
             name="confirm password"
             type="password"
-            ref={password => (this.password = password)}
+            ref={confirmPassword => (this.confirmPassword = confirmPassword)}
             required
           ></input>
           <button type="submit" class="form-button">Submit</button>
@@ -55,7 +70,7 @@ class ProductForm extends React.Component {
   }
 }
 
-export default connect()(ProductForm);
+export default connect()(RegisterForm);
 
 // export default reduxForm({
 //   form: 'product'

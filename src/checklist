@@ -1,8 +1,9 @@
-Deploy to Heroku (server)
-Setup TravisCI for server
+Deploy to Heroku (server) - done
+Use Action Creators instead of dispatch 
 Create Login/Register Screen
 Connect React to Node using Thunk
 Manually deploy client to Heroku
+Setup TravisCI for server
 ------ SUBMIT BY 12/31
 Run smoke tests on components
 Unit tests the action/reducer
