@@ -6,7 +6,7 @@ export const GET_PRODUCTS = "GET_PRODUCTS";
 export const LOGIN = "LOGIN";
 export const REGISTER = "REGISTER";
 
-const API_URL = "http://localhost:3001"
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 
 
