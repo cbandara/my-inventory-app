@@ -2,16 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 // import Input from "./Input";
 // import { reduxForm, Field } from 'redux-form';
-import { addProduct } from "../actions";
+import { loginUser } from "../actions";
 import "./ProductForm.css";
 
-class ProductForm extends React.Component {
+class LoginForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
-    const name = this.name.value;
-    const image = this.image.value;
-    this.props.dispatch(addProduct({ name, image }));
-    this.image.value = '';
+    const email = this.email.value;
+    const password = this.password.value;
+    this.props.dispatch(loginUser({ email, password }));
+    this.password.value = '';
     this.props.history.push("/"); // Redirects to the root path
   }
 
@@ -19,23 +19,23 @@ class ProductForm extends React.Component {
 
     return (
       // Convert to Redux Form when using API or skip
-      <div className="formWrapper">
-        <form className="productForm" onSubmit={e => this.onSubmit(e)}>
-          <label htmlFor="name">Name</label>
+      <div classemail="formWrapper">
+        <form classemail="productForm" onSubmit={e => this.onSubmit(e)}>
+          <label htmlFor="email">email</label>
           <input
-            name="name"
-            id="name"
+            name="email"
+            id="email"
             type="text"
-            ref={name => (this.name = name)}
+            ref={email => (this.email = email)}
             required
           ></input>
           <br />
-          <label htmlFor="image">Image</label>
+          <label htmlFor="password">Password</label>
           <input
-            name="image"
-            id="image"
-            type="text-area"
-            ref={image => (this.image = image)}
+            name="password"
+            id="password"
+            type="password"
+            ref={password => (this.password = password)}
             required
           ></input>
           <br />
@@ -47,7 +47,7 @@ class ProductForm extends React.Component {
   }
 }
 
-export default connect()(ProductForm);
+export default connect()(LoginForm);
 
 // export default reduxForm({
 //   form: 'product'

@@ -8,10 +8,10 @@ class EditForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const name = this.name.value;
-    const img = this.img.value;
-    const id = this.props.editFormData.id
+    const image = this.image.value;
+    const id = this.props.editFormData._id
     console.log(id)
-    this.props.dispatch(editProduct({ id, name, img }));
+    this.props.dispatch(editProduct(id, { name, image }));
     this.props.history.push("/"); // Redirects to the root path
   }
 
@@ -23,7 +23,7 @@ class EditForm extends React.Component {
   render() {
     // Get product from redux state
     // let productId = this.match.params.id
-    console.log(this.props.editFormData)
+    console.log("EditForm.render this.props", this.props)
     return (
       // Convert to Redux Form when using API
       <div className="formWrapper">
@@ -39,13 +39,13 @@ class EditForm extends React.Component {
             required
           ></input>
           <br />
-          <label htmlFor="img">Image</label>
+          <label htmlFor="image">Image</label>
           <input
-            name="img"
-            id="img"
+            name="image"
+            id="image"
             type="text-area"
-            ref={img => (this.img = img)}
-            defaultValue={this.props.editFormData.img}
+            ref={image => (this.image = image)}
+            defaultValue={this.props.editFormData.image}
             required
           ></input>
           <br />

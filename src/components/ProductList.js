@@ -3,15 +3,19 @@ import React from "react";
 import Product from "./Product";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { getProducts } from '../actions';
 import "./ProductList.css";
 
 
 class ProductList extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(getProducts())
+  }
   render() {
     console.log(this.props.productList)
     const products = this.props.productList.map(prod => {
       return (
-        <li key={prod.id}>
+        <li key={prod._id}>
           <Product item={prod}></Product>
         </li>
       );

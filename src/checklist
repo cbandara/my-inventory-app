@@ -1,0 +1,8 @@
+Deploy to Heroku (server)
+Setup TravisCI for server
+Create Login/Register Screen
+Connect React to Node using Thunk
+Manually deploy client to Heroku
+------ SUBMIT BY 12/31
+Run smoke tests on components
+Unit tests the action/reducer
