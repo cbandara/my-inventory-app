@@ -2,6 +2,7 @@
   "name": "my-inventory-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://my-inventory-app.github.io/build/index.html",
   "proxy": "https://my-inventory-api.herokuapp.com/",
   "dependencies": {
     "cors": "^2.8.5",
