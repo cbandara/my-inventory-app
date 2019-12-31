@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/my-inventory-app/static/css/main.0984708d.chunk.css",
-    "main.js": "/my-inventory-app/static/js/main.b124fc85.chunk.js",
-    "main.js.map": "/my-inventory-app/static/js/main.b124fc85.chunk.js.map",
-    "runtime-main.js": "/my-inventory-app/static/js/runtime-main.af669525.js",
-    "runtime-main.js.map": "/my-inventory-app/static/js/runtime-main.af669525.js.map",
-    "static/js/2.b845cacc.chunk.js": "/my-inventory-app/static/js/2.b845cacc.chunk.js",
-    "static/js/2.b845cacc.chunk.js.map": "/my-inventory-app/static/js/2.b845cacc.chunk.js.map",
-    "index.html": "/my-inventory-app/index.html",
-    "precache-manifest.de1bc9cef92482e0c8743deb294df96a.js": "/my-inventory-app/precache-manifest.de1bc9cef92482e0c8743deb294df96a.js",
-    "service-worker.js": "/my-inventory-app/service-worker.js",
-    "static/css/main.0984708d.chunk.css.map": "/my-inventory-app/static/css/main.0984708d.chunk.css.map"
+    "main.css": "/my-inventory-app/build/static/css/main.0984708d.chunk.css",
+    "main.js": "/my-inventory-app/build/static/js/main.7de3c750.chunk.js",
+    "main.js.map": "/my-inventory-app/build/static/js/main.7de3c750.chunk.js.map",
+    "runtime-main.js": "/my-inventory-app/build/static/js/runtime-main.cc8bab46.js",
+    "runtime-main.js.map": "/my-inventory-app/build/static/js/runtime-main.cc8bab46.js.map",
+    "static/js/2.b845cacc.chunk.js": "/my-inventory-app/build/static/js/2.b845cacc.chunk.js",
+    "static/js/2.b845cacc.chunk.js.map": "/my-inventory-app/build/static/js/2.b845cacc.chunk.js.map",
+    "index.html": "/my-inventory-app/build/index.html",
+    "precache-manifest.22f67e112642264f38b344515d0c6ebe.js": "/my-inventory-app/build/precache-manifest.22f67e112642264f38b344515d0c6ebe.js",
+    "service-worker.js": "/my-inventory-app/build/service-worker.js",
+    "static/css/main.0984708d.chunk.css.map": "/my-inventory-app/build/static/css/main.0984708d.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.af669525.js",
+    "static/js/runtime-main.cc8bab46.js",
     "static/js/2.b845cacc.chunk.js",
     "static/css/main.0984708d.chunk.css",
-    "static/js/main.b124fc85.chunk.js"
+    "static/js/main.7de3c750.chunk.js"
   ]
 }
