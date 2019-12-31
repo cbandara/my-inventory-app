@@ -2,7 +2,7 @@
   "name": "my-inventory-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cbandara.github.io/my-inventory-app/",
+  "homepage": "https://cbandara.github.io",
   "proxy": "https://my-inventory-api.herokuapp.com/",
   "dependencies": {
     "cors": "^2.8.5",
