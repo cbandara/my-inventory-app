@@ -14,13 +14,13 @@ class RegisterForm extends React.Component {
     const password = this.password.value;
     const confirmPassword = this.confirmPassword.value;
 
-    if(password !== confirmPassword){
+    if (password !== confirmPassword) {
       this.setState({
         error: 'passwords does not match'
       })
       return
     }
-    if(password.length < 8){
+    if (password.length < 8) {
       this.setState({
         error: "password must be a minimum of 8 characters"
       })
@@ -56,13 +56,13 @@ class RegisterForm extends React.Component {
           <br />
           <label htmlFor="confirm_password">Confirm Password</label>
           <input
-            id="password"
+            id="confirm-password"
             name="confirm password"
             type="password"
             ref={confirmPassword => (this.confirmPassword = confirmPassword)}
             required
           ></input>
-          <button type="submit" class="form-button">Submit</button>
+          <button type="submit" className="form-button">Submit</button>
         </form>
       </div>
 

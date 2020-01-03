@@ -39,7 +39,7 @@ class ProductForm extends React.Component {
             required
           ></input>
           <br />
-          <button type="submit" class="form-button">Add</button>
+          <button type="submit" className="form-button">Add</button>
         </form>
       </div>
 

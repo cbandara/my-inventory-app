@@ -22,10 +22,6 @@ const PrivateRoute = ({ component: Component, path, ...rest }) => {
 
 }
 class Board extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   // const productList = props.productList;
-  // }
 
   render() {
     return (

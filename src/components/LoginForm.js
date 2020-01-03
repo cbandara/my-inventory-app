@@ -12,7 +12,7 @@ class LoginForm extends React.Component {
     const password = this.password.value;
     this.props.dispatch(loginUser({ email, password }));
     this.password.value = '';
-    this.props.history.push("/"); // Redirects to the root path
+    this.props.history.push("/");
   }
 
   render() {
@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
             required
           ></input>
           <br />
-          <button type="submit" class="form-button">Add</button>
+          <button type="submit" className="form-button">Add</button>
         </form>
       </div>
 
@@ -49,6 +49,3 @@ class LoginForm extends React.Component {
 
 export default connect()(LoginForm);
 
-// export default reduxForm({
-//   form: 'product'
-// })(ProductForm);

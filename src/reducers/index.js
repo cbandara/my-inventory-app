@@ -4,18 +4,6 @@ const initialState = {
   // add edit form data
   editFormData: {},
   productList: [
-    {
-      id: 3211,
-      name: "red t-shirt",
-      image:
-        "https://imageprod65.hobbylobby.com/sys-master/migrated/h06/h48/h00/8998682099742/422790_3[5].jpg"
-    },
-    {
-      id: 1112,
-      name: "blue t-shirt",
-      image:
-        "https://cdn.ccs.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/e/n/enjoi-doesn-t-fit-t-shirt-royal-blue-2.1506663643.jpg"
-    }
   ]
 };
 

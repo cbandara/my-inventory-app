@@ -12,7 +12,7 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 export const registerUser = user => (dispatch) => {
 
-  fetch(`/users/register`, {
+  fetch(API_URL + `/users/register`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -32,8 +32,7 @@ export const registerUser = user => (dispatch) => {
 };
 
 export const loginUser = user => (dispatch) => {
-
-  fetch(`/auth/login`, {
+  fetch(API_URL + `/auth/login`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -53,7 +52,7 @@ export const loginUser = user => (dispatch) => {
 
 export const getProducts = () => (dispatch) => {
 
-  fetch(`/products`, {
+  fetch(API_URL + `/products`, {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -73,7 +72,7 @@ export const getProducts = () => (dispatch) => {
 
 export const addProduct = product => (dispatch) => {
 
-  fetch(`/products`, {
+  fetch(API_URL + `/products`, {
     method: 'POST',
     body: JSON.stringify(product),
     headers: {
@@ -95,7 +94,7 @@ export const addProduct = product => (dispatch) => {
 
 export const deleteProduct = product => (dispatch) => {
 
-  fetch(`/products/${product.id}`, {
+  fetch(API_URL + `/products/${product.id}`, {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',
@@ -114,7 +113,7 @@ export const deleteProduct = product => (dispatch) => {
 
 export const editProduct = (id, product) => (dispatch) => {
 
-  fetch(`/products/${id}`, {
+  fetch(API_URL + `/products/${id}`, {
     method: 'PUT',
     body: JSON.stringify(product),
     headers: {
