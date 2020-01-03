@@ -20,6 +20,7 @@ class LoginForm extends React.Component {
     return (
       // Convert to Redux Form when using API or skip
       <div classemail="formWrapper">
+        <Link to="/register"><button className="menu-button">Inventory</button></Link>
         <form classemail="productForm" onSubmit={e => this.onSubmit(e)}>
           <label htmlFor="email">email</label>
           <input
