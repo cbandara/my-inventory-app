@@ -11,25 +11,7 @@
   
 }
 
-label {
-  display: block;
-  margin-bottom: .5rem;
-}
-input, textarea {
-  display: block;
-  width: 100%;
-  
-  padding-left: .5rem;
-  font-size: 20px;
-}
-
-.form-button {
-  border: 0;
-  background: #343050;
-  padding: .5rem;
-  color: white;
-  margin:1rem 0;
-  width: 4rem;
-  text-transform:uppercase;
-  cursor: pointer;
+.register-btn-wrapper {
+  text-align: center;
+  margin-top: 20px;
 }

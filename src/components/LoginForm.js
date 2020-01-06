@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-// import Input from "./Input";
-// import { reduxForm, Field } from 'redux-form';
+import { Link } from "react-router-dom";
 import { loginUser } from "../actions";
 import "./ProductForm.css";
 
@@ -19,9 +18,13 @@ class LoginForm extends React.Component {
 
     return (
       // Convert to Redux Form when using API or skip
-      <div classemail="formWrapper">
-        <Link to="/register"><button className="menu-button">Inventory</button></Link>
-        <form classemail="productForm" onSubmit={e => this.onSubmit(e)}>
+      <div className="formWrapper">
+
+        <div className="register-btn-wrapper">
+          <img src={'../img/myinventory.png'} alt="Logo"></img>
+          <p>MyInventory allows you to add and modify products in our database. In order to use this app you must register and login.</p>
+          <Link to="/register"><button className="menu-button">Register</button></Link></div>
+        <form className="productForm" onSubmit={e => this.onSubmit(e)}>
           <label htmlFor="email">email</label>
           <input
             name="email"
@@ -40,7 +43,7 @@ class LoginForm extends React.Component {
             required
           ></input>
           <br />
-          <button type="submit" className="form-button">Add</button>
+          <button type="submit" className="form-button">Login</button>
         </form>
       </div>
 

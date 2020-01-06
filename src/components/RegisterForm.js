@@ -15,15 +15,16 @@ class RegisterForm extends React.Component {
     const confirmPassword = this.confirmPassword.value;
 
     if (password !== confirmPassword) {
-      this.setState({
-        error: 'passwords does not match'
-      })
+      alert("Passwords must match")
+      this.password.value = '';
+      this.confirmPassword.value = '';
       return
     }
     if (password.length < 8) {
-      this.setState({
-        error: "password must be a minimum of 8 characters"
-      })
+      alert("Passwords must be longer than 8 characters")
+      this.password.value = '';
+      this.confirmPassword.value = '';
+      return
     }
     this.props.dispatch(registerUser({ email, password }));
     this.password.value = '';
@@ -34,9 +35,9 @@ class RegisterForm extends React.Component {
 
     return (
       // Convert to Redux Form when using API or skip
-      <div classemail="formWrapper">
-        <form classemail="productForm" onSubmit={e => this.onSubmit(e)}>
-          <label htmlFor="email">email</label>
+      <div className="formWrapper">
+        <form className="productForm" onSubmit={e => this.onSubmit(e)}>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             name="email"
@@ -54,15 +55,15 @@ class RegisterForm extends React.Component {
             required
           ></input>
           <br />
-          <label htmlFor="confirm_password">Confirm Password</label>
+          <label htmlFor="confirmpassword">Confirm Password</label>
           <input
-            id="confirm-password"
-            name="confirm password"
+            id="confirmpassword"
+            name="confirmpassword"
             type="password"
             ref={confirmPassword => (this.confirmPassword = confirmPassword)}
             required
           ></input>
-          <button type="submit" className="form-button">Submit</button>
+          <button type="submit" className="form-button">Register</button>
         </form>
       </div>
 

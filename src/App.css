@@ -1,5 +1,6 @@
 .App {
 	font-size: 20px;
+	margin-top: 10px;
 }
 .App-logo {
   height: 40vmin;
@@ -29,7 +30,7 @@
 	border:1px solid #dcdcdc;
 	display:inline-block;
 	cursor:pointer;
-	color:#666666;
+	color: black;
 	font-family:Arial;
 	font-size:16px;
 	padding:6px 17px;
@@ -44,4 +45,36 @@ button:hover {
 button:active {
 	position:relative;
 	top:1px;
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+input, textarea {
+  display: block;
+  width: 100%;
+  
+  padding-left: .5rem;
+  font-size: 20px;
+}
+
+.form-button {
+  border: 0;
+  background: #343050;
+  color: white;
+  margin:1rem 0;
+  width: 6rem;
+  text-transform:uppercase;
+	cursor: pointer;
+	font-size:16px;
+	padding: 6px;
+	
+}
+.form-button:hover {
+	background:blue;
+}
+
+form {
+	padding: 20px;
 }
