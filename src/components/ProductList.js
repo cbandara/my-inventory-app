@@ -23,7 +23,7 @@ class ProductList extends React.Component {
     return (
       <div className="ProductList">
         <ul>{products}</ul>
-        <Link to="/addProduct"><button>Add Product</button></Link>
+        <Link to="/addProduct"><button className="menu-button">Add Product</button></Link>
       </div>
     );
   }

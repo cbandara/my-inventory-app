@@ -33,8 +33,8 @@ class Product extends React.Component {
       <div className="Product">
         <img src={this.props.item.image} alt={this.props.item.name} />
         <p className="id">{this.props.item.name}</p>
-        <button onClick={this.handleOnClickEdit}>Edit</button>
-        <button onClick={this.handleOnClickDelete}>Delete</button>
+        <button onClick={this.handleOnClickEdit} className="product-button">Edit</button>
+        <button onClick={this.handleOnClickDelete} className="product-button">Delete</button>
       </div>
     );
   }

@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
       <div className="formWrapper">
 
         <div className="register-btn-wrapper">
-          <img src={'../img/myinventory.png'} alt="Logo"></img>
+          <img src={require('../img/myinventory.png')} className="logo-img" alt="Logo"></img>
           <p>MyInventory allows you to add and modify products in our database. In order to use this app you must register and login.</p>
           <Link to="/register"><button className="menu-button">Register</button></Link></div>
         <form className="productForm" onSubmit={e => this.onSubmit(e)}>
