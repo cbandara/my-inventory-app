@@ -23,7 +23,7 @@ export const registerUser = user => (dispatch) => {
     .then((res) => res.json())
     .then((data) => {
 
-      alert("registration Successfull");
+      alert("registration Successful");
       window.location.href = "/login"
 
 
