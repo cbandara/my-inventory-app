@@ -1,0 +1,14 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+env:
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: KiNNyYADIWifVvowS6Qx/Zh9Lc02S3dkoJdjR6RHcTuB0LLlG3l7d9uEX0b/Vor4YNGxhtnLFj8Tdr5C6CvHeYqx0bzmSV8lzbkURCI+tuVKprYJjdWLwfE2C1SP7cmEAZSD82g2oYo/qfOBqatt6JWD1knWn/UCIGHRA6nuQpCrzj+J8Je2K9TWBRQUsC/COEjKKqabPg9UNHBFuuwgur4U2K6AA+pyTQkV2MsvBzAlnIn6AKkhVyakWkWkNc7YiARR5jl5B8WydCEH80O5K7ZgyB4WcXIVNC6HrnS/joL9+ZV9nxt5amRxzociSYLr5MdnMBSgusAge6TUxL13uOF0S2d7sZw8UYBwVbhySmKP0PtAAt9m/XqOU+R5n0iCL3/7mTqeavFksWvMJ78ZuJp5U05XBNI9yFseTuS72ogpp8SKuQcSaWH2TLvudQBKopoARehcv6X0MOYR34oSQqH1ZRfDpW4YN+pJdNm6qqjCKApSbwyxfK9nK8K2v5LBuQY3qu3YxmLHbiYrH5C2deTn25RxsOaXSEC2Ilw4Y4EPnXfFjG5dSaiKG4RxHGT5oeRs9xdFJdPDMIejbcVdZnK+tkM9GJ/DWL2lwcZCwJMRSMS9rwAYo1AFeqCNG479yWXBttNKqRgvC3NmZgLYX3FeR61ekq3pEaVyWIduub4=
+  app: my-inventory-app
+  on:
+    repo: cbandara/my-inventory-app
