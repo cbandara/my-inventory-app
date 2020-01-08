@@ -1,4 +1,5 @@
-import { registerUser } from "./actions";
+import { registerUser, REGISTER } from './index';
+// import {ADD_LIST, addList, ADD_CARD, addCard} from './index';
 
 describe('registerUser', () => {
   it('Should create a user', () => {
